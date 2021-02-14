@@ -1,4 +1,4 @@
-# 🐳 Docker + PHP 7.4 + MySQL + Nginx + Symfony 5 Boilerplate
+# 🐳 Docker + PHP 7.4 + Redis + Nginx + Symfony 5 Boilerplate
 
 ## Description
 
@@ -8,7 +8,7 @@ It is composed by 3 containers:
 
 - `nginx`, acting as the webserver.
 - `php`, the PHP-FPM container with the 7.4 PHPversion.
-- `db` which is the MySQL database container with a **MySQL 8.0** image.
+- `redis`, 
 
 ## Installation
 
@@ -19,9 +19,9 @@ It is composed by 3 containers:
 3. The 3 containers are deployed: 
 
 ```
-Creating symfony-docker_db_1    ... done
-Creating symfony-docker_php_1   ... done
-Creating symfony-docker_nginx_1 ... done
+Creating symfony-nginx ... done
+Creating symfony-redis ... done
+Creating symfony-php   ... done
 ```
 
 4. Use this value for the DATABASE_URL environment variable of Symfony:
