@@ -1,4 +1,4 @@
-# 🐳 Docker + PHP 7.4 + Redis + Nginx + Symfony 5 Boilerplate
+# 🐳 Docker + PHP 7.4 + MariaDB + Redis + Nginx + Symfony 5 Boilerplate
 
 ## Description
 
@@ -8,6 +8,7 @@ It is composed by 3 containers:
 
 - `nginx`, acting as the webserver.
 - `php`, the PHP-FPM container with the 7.4 PHPversion.
+- `mariaDB`, 
 - `redis`, 
 
 ## Installation

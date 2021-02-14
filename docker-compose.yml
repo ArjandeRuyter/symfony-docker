@@ -23,6 +23,23 @@ services:
             - 8002:80
         networks:
             - symfony
+    mariadb:
+        image: mariadb:10.4
+        container_name: symfony-mariadb
+        environment:
+            MYSQL_ROOT_PASSWORD: changeme!
+            MYSQL_DATABASE: mybb
+            MYSQL_USER: mybb
+            MYSQL_PASSWORD: changeme!
+        ports:
+            - 3306
+        restart: 'always'
+        volumes:
+            - ./mariadb/mysql:/var/lib/mysql
+            - ./mariadb/mariadb/conf:/etc/mysql
+        networks:
+            - symfony
+
     redis:
         container_name: symfony-redis
         build:
